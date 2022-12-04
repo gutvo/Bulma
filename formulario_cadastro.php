@@ -37,8 +37,11 @@
                         <div class="field">
                             <label class="label">Senha de usuário</label>
                             <div class="control">
-                                <input class="input is-danger" name="senha" type="text"
-                                    placeholder="Digite a senha de usuário">
+                                <input class="input is-danger" name="senha" type="password"
+                                    placeholder="Digite a senha de usuário" id="senha">
+                                    <label class="checkbox">
+                                        <input type="checkbox" onclick="myFunction()">Mostrar Senha
+                                    </label>
                             </div>
                         </div>
                         <div class="field">

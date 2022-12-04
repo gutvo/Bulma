@@ -12,14 +12,13 @@
 
 <body>
     <?php include "navbar.php"?>
-    <section class="section">
         <div class="container">
             <div class="columns is-mobile is-centered">
                 <div class="column is-half">
                     <?php
                         $erro = filter_input(INPUT_GET,"erro",FILTER_SANITIZE_NUMBER_INT);
                         if($erro==1){
-                            echo "<div class='notification is-danger'><button class='delete'></button><strong>Não foi possivel fazer o cadastro</strong></div>";
+                            echo "<div class='notification is-danger'><button class='delete'></button><strong>Não foi possivel fazer o login</strong></div>";
                         }
                         ?>
                     <h1 class="title has-text-centered">Login</h1>
@@ -34,10 +33,14 @@
                         <div class="field">
                             <label class="label">Senha de usuário</label>
                             <div class="control">
-                                <input class="input is-danger" name="senha" type="text"
-                                    placeholder="Digite a senha de usuário">
+                                <input class="input is-danger" name="senha" type="password"
+                                    placeholder="Digite a senha de usuário" id="senha">
+                                    <label class="checkbox">
+                                        <input type="checkbox" onclick="myFunction()">Mostrar Senha
+                                    </label>
                             </div>
                         </div>
+                        <div class="field">
                         <div class="field">
                             <div class="buttons is-centered">
                                 <div class="control">
@@ -48,7 +51,6 @@
                     </form>
                 </div>
             </div>
-        </div>
     </section>
 </body>
 <?php
@@ -66,12 +68,10 @@ if(isset($_POST['user']) && isset($_POST['senha'])){
         header("location: home.php");
         exit;
     }else{
-        header("location: index.php?erro=1");
+        header("location: login.php?erro=1");
     }
     mysqli_close($conexao);
 }
-    
-
 ?>
-
+<script src="js/main.js"></script>
 </html>

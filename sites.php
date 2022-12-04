@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
     <title>Cadastrar Usuário</title>
 </head>
 
@@ -21,8 +22,8 @@
     <section class="section">
         <div class="container">
             <div class="columns is-mobile is-centered">
-                <div class="column is-half">
-                    <h1 class="title has-text-centered">Sites</h1>
+                <div class="column is-half max-width">
+                    <h1 class="title has-text-centered has-text-danger">Sites</h1>
                     <table class="table is-bordered is-striped is-fullwidth is-centered">
                         <thead>
                             <th class="has-text-centered">Nome de diretório</th>
